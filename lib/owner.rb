@@ -47,4 +47,8 @@ class Owner
   def feed_cats
     Cat.all.select{|cat| cat.mood = "happy"}
   end
+
+  def sell_pets
+    (Cat.all && Dog.all).select{|cat, dog| cat.mood = "nervous" dog.mood ="nervous"}
+  end
 end
