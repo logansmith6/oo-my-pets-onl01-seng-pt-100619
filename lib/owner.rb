@@ -54,4 +54,8 @@ class Owner
     Cat.all.select{|cat| cat.owner = nil}
     Dog.all.select{|dog| dog.owner = nil}
   end
+
+  def list_pets
+    puts "I have #{dogs.count} dog(s), and #{cats.count} cat(s)."
+  end
 end
